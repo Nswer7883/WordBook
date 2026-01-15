@@ -5,15 +5,88 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="25dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="main_logo_button"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_logo2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="WordBook"
+                android:textSize="40dp"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="8">
+
+            <ImageButton
+                android:id="@+id/btn_adding"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="adding button"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="100dp"
+                android:layout_marginRight="25dp"
+                tools:ignore="RtlHardcoded" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linear_wordlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_change_list"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="List"
+                android:textSize="40dp"/>
+
+            <Button
+                android:id="@+id/btn_change_quiz"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Quiz"
+                android:textSize="40dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
