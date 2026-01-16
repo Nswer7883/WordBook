@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="25dp">
+    android:layout_margin="25dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,43 +23,23 @@
                 android:id="@+id/btn_logo"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:contentDescription="main_logo_button"
+                android:contentDescription="@string/main_logo_button"
                 android:layout_gravity="center"/>
 
             <Button
                 android:id="@+id/btn_logo2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="WordBook"
-                android:textSize="40dp"/>
+                android:text="@string/title"
+                android:textSize="40sp"/>
         </LinearLayout>
 
         <FrameLayout
+            android:id="@+id/frame_changeable"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="8">
 
-            <ImageButton
-                android:id="@+id/btn_adding"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:contentDescription="adding button"
-                android:layout_gravity="right|bottom"
-                android:layout_marginBottom="100dp"
-                android:layout_marginRight="25dp"
-                tools:ignore="RtlHardcoded" />
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/linear_wordlist"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"/>
-
-            </ScrollView>
 
         </FrameLayout>
 
@@ -74,16 +54,17 @@
                 android:layout_width="0px"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="List"
-                android:textSize="40dp"/>
+                android:text="@string/list"
+                android:textSize="40sp"
+                tools:ignore="NestedWeights" />
 
             <Button
                 android:id="@+id/btn_change_quiz"
                 android:layout_width="0px"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="Quiz"
-                android:textSize="40dp"/>
+                android:text="@string/quiz"
+                android:textSize="40sp"/>
 
         </LinearLayout>
 
