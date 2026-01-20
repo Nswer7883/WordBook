@@ -2,6 +2,7 @@
     <string name="app_name">WordBook</string>
     <string name="quiz">Quiz</string>
     <string name="list">List</string>
+    <string name="adding">Add word to list</string>
     <string name="adding_button">button to add word in word list</string>
     <string name="title">WordBook</string>
     <string name="main_logo_button">button to go word list screen</string>

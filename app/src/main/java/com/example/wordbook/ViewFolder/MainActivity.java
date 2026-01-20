@@ -1,4 +1,4 @@
-package com.example.wordbook;
+package com.example.wordbook.ViewFolder;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,13 +9,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+
+import com.example.wordbook.R;
 
 public class MainActivity extends AppCompatActivity {
-    private ListFragment listFragment;
-    private QuizFragment quizFragment;
-
+    public Fragment listFragment;
+    public Fragment quizFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,26 +24,21 @@ public class MainActivity extends AppCompatActivity {
 
         listFragment = new ListFragment();
         quizFragment = new QuizFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.frame_changeable, listFragment).commit();
+
         Button btnChangeList = findViewById(R.id.btn_change_list);
         Button btnChangeQuiz = findViewById(R.id.btn_change_quiz);
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_changeable, listFragment).commit();
 
         btnChangeList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.frame_changeable, listFragment)
-                        .commit();
+                changeMode(listFragment);
             }
         });
         btnChangeQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.frame_changeable, quizFragment)
-                        .commit();
+                changeMode(quizFragment);
             }
         });
 
@@ -54,16 +49,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-/*    public void changeMode(View view) {
-        transaction = fragmentManager.beginTransaction();
-
-        switch (view.getId()) {
-            case R.id.btn_change_list:
-                transaction.replace(R.id.frame_changeable, listFragment).commitAllowingStateLoss();
-                break;
-            case R.id.btn_change_quiz:
-                transaction.replace(R.id.frame_changeable, quizFragment).commitAllowingStateLoss();
-                break;
-        }
-    }*/
+    public void changeMode(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_changeable, fragment).commit();
+    }
 }

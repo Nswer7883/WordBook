@@ -5,16 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/btn_adding"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:contentDescription="@string/adding_button"
-        android:layout_gravity="right|bottom"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="25dp"
-        tools:ignore="RtlHardcoded" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,8 +13,18 @@
             android:id="@+id/linear_wordlist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal">
+        </LinearLayout>
 
     </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_adding"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/adding_button"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="25dp"/>
 
 </FrameLayout>
