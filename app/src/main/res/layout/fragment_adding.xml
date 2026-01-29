@@ -1,20 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:id="@+id/linear_adding"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </ScrollView>
+    android:layout_height="600dp"
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <ImageButton
         android:id="@+id/btn_close_adding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_btn_close"
+        android:contentDescription="@string/close" />
 
-</FrameLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/spelling"
+            android:textSize="27sp"
+            tools:ignore="NestedWeights"
+            android:labelFor="@id/et_spelling"/>
+        <EditText
+            android:id="@+id/et_spelling"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/spelling"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/meaning"
+            android:textSize="27sp"
+            tools:ignore="NestedWeights"
+            android:labelFor="@id/et_meaning"/>
+        <EditText
+            android:id="@+id/et_meaning"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/meaning"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/word_class"
+            android:textSize="27sp"
+            tools:ignore="NestedWeights"
+            android:labelFor="@id/et_word_class"/>
+        <EditText
+            android:id="@+id/et_word_class"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/word_class"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textSize="27sp"
+            tools:ignore="NestedWeights"
+            android:labelFor="@id/et_description"/>
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/description"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/create"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
+</LinearLayout>

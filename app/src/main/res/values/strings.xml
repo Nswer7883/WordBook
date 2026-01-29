@@ -6,4 +6,10 @@
     <string name="adding_button">button to add word in word list</string>
     <string name="title">WordBook</string>
     <string name="main_logo_button">button to go word list screen</string>
+    <string name="spelling">Spelling</string>
+    <string name="close">close this window</string>
+    <string name="word_class">Word Class</string>
+    <string name="meaning">Meaning</string>
+    <string name="description">description</string>
+    <string name="create">Create</string>
 </resources>

@@ -6,9 +6,9 @@ public class WordCard {
     private final String spelling;
     private final String meaning;
     private final String wordClass;
-    private final String[] attributes;
+    private final Map<String, Boolean> attributes;
 
-    public WordCard(String spelling, String meaning, String wordClass, String[] attributes) {
+    public WordCard(String spelling, String meaning, String wordClass, Map<String, Boolean> attributes) {
         this.spelling = spelling;
         this.meaning = meaning;
         this.wordClass = wordClass;
@@ -24,7 +24,7 @@ public class WordCard {
     public String getWordClass() {
         return wordClass;
     }
-    public String[] getAttributes() {
+    public Map<String, Boolean> getAttributes() {
         return attributes;
     }
 }
