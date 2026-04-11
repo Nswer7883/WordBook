@@ -29,8 +29,8 @@ public class ListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_list, container, false);
-        btnAdding = rootView.findViewById(R.id.btn_adding);
         mainActivity = (MainActivity) getActivity();
+        btnAdding = rootView.findViewById(R.id.btn_adding);
         addingFragment = new AddingFragment();
         btnAdding.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +38,8 @@ public class ListFragment extends Fragment {
                 mainActivity.changeMode(addingFragment);
             }
         });
+
+        mainActivity.viewModel.getWordList().observe(getViewLifecycleOwner(), list -> {});
 
         return rootView;
     }
