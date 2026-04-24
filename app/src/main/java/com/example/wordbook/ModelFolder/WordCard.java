@@ -1,10 +1,10 @@
 package com.example.wordbook.ModelFolder;
 
 public class WordCard {
-    private final String spelling;
-    private final String meaning;
+    private String spelling;
+    private String meaning;
     //    private final String wordClass;
-    private final String description;
+    private String description;
 
     public WordCard(String spelling, String meaning, String description) {
         this.spelling = spelling;
@@ -24,5 +24,17 @@ public class WordCard {
     //    }
     public String getDescription() {
         return description;
+    }
+
+    public void setSpelling(String spell) {
+        spelling = spell;
+    }
+
+    public void setMeaning(String mean) {
+        meaning = mean;
+    }
+
+    public void setDescription(String describe) {
+        description = describe;
     }
 }
